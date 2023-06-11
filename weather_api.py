@@ -39,6 +39,6 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Please provide the name of a city as an argument.")
         sys.exit(1)
-    api_key = "f42eca4d711df80d1920407fe666b913"
+    api_key = "your-api-key"
     city_name = " ".join(sys.argv[1:])
     get_weather(city_name, api_key)
