@@ -12,7 +12,6 @@ def get_weather(city_name, api_key):
         "appid": api_key,
         "units": "metric"
     }
-    # write code for getting response from http reques and handle all exception
     try:
         response = requests.get(base_url, params=params)
         response.raise_for_status()
