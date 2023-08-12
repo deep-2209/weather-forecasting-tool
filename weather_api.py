@@ -1,3 +1,4 @@
+# import libraries
 import warnings
 with warnings.catch_warnings():
     warnings.filterwarnings('ignore')
@@ -5,6 +6,8 @@ with warnings.catch_warnings():
 import json
 import sys
 
+
+# function to get weather data
 def get_weather(city_name, api_key):
     base_url = "http://api.openweathermap.org/data/2.5/weather"
     params = {
@@ -29,6 +32,7 @@ def get_weather(city_name, api_key):
         print(f"City '{city_name}' not found. Please check the spelling and try again.")
         return
 
+    # printing the information
     print(f"Weather forecast for {weather_data['name']}:")
     print(f"Temperature: {weather_data['main']['temp']}°C")
     print(f"Weather: {weather_data['weather'][0]['description']}")
